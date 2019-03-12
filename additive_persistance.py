@@ -1,3 +1,13 @@
+def run():
+    f = open("input.txt", "r")
+    for line in f:
+        number = line.rstrip()
+        result = additive_persistance(number)
+        print "Input: %s" % (number)
+        print "Itterations: %s" % (result)
+        print "\n"
+    f.close()
+
 #Return the additive_persistance of the input
 #Precondition: number is of type String
 def additive_persistance(number):
@@ -19,11 +29,5 @@ def sum_digits(number):
         _sum += int(number[i])
     return str(_sum)
 
-def run():
-    f = open("input.txt", "r")
-    for line in f:
-        result = additive_persistance(line.rstrip())
-        print "\nInput: %s \nItterations: %s" % (line.rstrip(), result)
-    f.close()
 
 run()
