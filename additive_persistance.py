@@ -23,7 +23,7 @@ def run():
     f = open("input.txt", "r")
     for line in f:
         result = additive_persistance(line.rstrip())
-        print "Input: %s \nItterations: %s" % (line.rstrip(), result)
+        print "\nInput: %s \nItterations: %s" % (line.rstrip(), result)
     f.close()
 
 run()
